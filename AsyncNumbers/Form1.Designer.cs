@@ -39,14 +39,19 @@
             this.applyButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.TextNumbers = new System.Windows.Forms.Label();
+            this.patency = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.speedMS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patency)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.Controls.Add(this.patency);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.speedMS);
             this.panel1.Controls.Add(this.label3);
@@ -59,7 +64,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(569, 270);
+            this.panel1.Size = new System.Drawing.Size(569, 318);
             this.panel1.TabIndex = 0;
             // 
             // label4
@@ -69,7 +74,7 @@
             this.label4.BackColor = System.Drawing.SystemColors.Window;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label4.Location = new System.Drawing.Point(290, 202);
+            this.label4.Location = new System.Drawing.Point(290, 250);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 13);
             this.label4.TabIndex = 9;
@@ -140,7 +145,7 @@
             this.stoper.Enabled = false;
             this.stoper.FlatAppearance.BorderSize = 0;
             this.stoper.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.stoper.Location = new System.Drawing.Point(293, 226);
+            this.stoper.Location = new System.Drawing.Point(293, 274);
             this.stoper.Name = "stoper";
             this.stoper.Size = new System.Drawing.Size(264, 32);
             this.stoper.TabIndex = 5;
@@ -155,7 +160,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label2.Location = new System.Drawing.Point(14, 200);
+            this.label2.Location = new System.Drawing.Point(14, 248);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 15);
             this.label2.TabIndex = 4;
@@ -168,7 +173,7 @@
             this.applyButton.BackColor = System.Drawing.SystemColors.Control;
             this.applyButton.FlatAppearance.BorderSize = 0;
             this.applyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.applyButton.Location = new System.Drawing.Point(17, 226);
+            this.applyButton.Location = new System.Drawing.Point(17, 274);
             this.applyButton.Name = "applyButton";
             this.applyButton.Size = new System.Drawing.Size(270, 32);
             this.applyButton.TabIndex = 3;
@@ -201,14 +206,51 @@
             this.TextNumbers.Text = "0";
             this.TextNumbers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // patency
+            // 
+            this.patency.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.patency.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.patency.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.patency.Location = new System.Drawing.Point(17, 192);
+            this.patency.Maximum = new decimal(new int[] {
+            2147483647,
+            0,
+            0,
+            0});
+            this.patency.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.patency.Name = "patency";
+            this.patency.Size = new System.Drawing.Size(540, 23);
+            this.patency.TabIndex = 11;
+            this.patency.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(14, 172);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(134, 17);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Проходимость числа";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 270);
+            this.ClientSize = new System.Drawing.Size(569, 318);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(585, 309);
+            this.MinimumSize = new System.Drawing.Size(585, 357);
             this.Name = "Form1";
             this.Text = "AsyncNumbers";
             this.Load += new System.EventHandler(this.FormLoad);
@@ -216,6 +258,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.speedMS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patency)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -232,6 +275,8 @@
         private System.Windows.Forms.NumericUpDown speedMS;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown patency;
+        private System.Windows.Forms.Label label5;
     }
 }
 
